@@ -1,0 +1,109 @@
+/* ==========================
+   NAVBAR
+========================== */
+body {
+  background: pink !important;
+}
+
+
+.navbar{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 40px;
+
+    background:white;
+
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+}
+
+
+/* ==========================
+   LOGO
+========================== */
+
+.logo h1{
+
+    color:var(--primary-color);
+
+    font-size:1.7rem;
+
+    font-weight:700;
+
+}
+
+
+/* ==========================
+   NAV LINKS
+========================== */
+
+.nav-links{
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+
+.nav-links a{
+
+    font-size:1rem;
+
+    font-weight:500;
+
+    transition:0.3s;
+
+}
+
+
+.nav-links a:hover{
+
+    color:var(--primary-color);
+
+}
+
+
+/* ==========================
+   BUTTON
+========================== */
+
+.join-btn{
+
+    padding:12px 22px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:var(--primary-color);
+
+    color:white;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    transition:0.3s;
+
+}
+
+
+.join-btn:hover{
+
+    background:var(--secondary-color);
+
+}
