@@ -112,3 +112,211 @@ button{
     margin:0 auto;
     
 }
+
+/* ===========================
+   HERO SECTION
+=========================== */
+
+.hero{
+
+    min-height:85vh;
+
+    display:flex;
+
+    align-items:center;
+
+}
+.hero-content{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    align-items:center;
+
+    gap:60px;
+
+}
+/* ===========================
+   HERO BADGE
+=========================== */
+
+.hero-badge{
+
+    display:inline-block;
+
+    background:#dbeafe;
+
+    color:var(--primary-color);
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+    margin-bottom:25px;
+
+}
+
+
+/* ===========================
+   HERO TEXT
+=========================== */
+
+.hero-text h1{
+
+    font-size:4rem;
+
+    font-weight:800;
+
+    letter-spacing:-2px;
+
+    line-height:1.1;
+
+    margin-bottom:25px;
+
+}
+
+.hero-text span{
+
+    color:var(--primary-color);
+
+}
+
+.hero-text p{
+
+    font-size:1.15rem;
+
+    color:var(--dark-gray);
+
+    max-width:550px;
+
+    line-height:1.8;
+
+    margin-bottom:40px;
+
+}
+
+
+/* ===========================
+   HERO BUTTONS
+=========================== */
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+.primary-btn{
+
+    background:var(--primary-color);
+
+    color:white;
+
+    border:none;
+
+    padding:14px 28px;
+
+    border-radius:8px;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:all .3s ease;
+
+}
+
+.primary-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 25px rgba(37,99,235,.25);
+
+}
+.secondary-btn{
+
+    background:white;
+
+    color:var(--primary-color);
+
+    border:2px solid var(--primary-color);
+
+    padding:14px 28px;
+
+    border-radius:8px;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:all .3s ease;
+
+}
+
+.secondary-btn:hover{
+
+    background:var(--primary-color);
+
+    color:white;
+
+}
+
+
+/* ===========================
+   HERO IMAGE
+=========================== */
+
+.hero-image{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.hero-image img{
+
+    width:100%;
+
+    max-width:520px;
+
+    animation:float 4s ease-in-out infinite;
+
+}
+
+/* ===========================
+   FLOATING ANIMATION
+=========================== */
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-15px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
