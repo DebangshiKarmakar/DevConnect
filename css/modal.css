@@ -1,0 +1,132 @@
+/* ===========================
+   MODAL BACKGROUND
+=========================== */
+
+.modal{
+
+    display:none;
+
+    position:fixed;
+
+    z-index:2000;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(0,0,0,0.6);
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+/* ===========================
+   MODAL BOX
+=========================== */
+
+.modal-content{
+
+    background:white;
+
+    width:90%;
+
+    max-width:500px;
+
+    padding:30px;
+
+    border-radius:12px;
+
+    position:relative;
+
+    animation:popup 0.3s ease;
+
+}
+
+
+/* ===========================
+   CLOSE BUTTON
+=========================== */
+
+.close{
+
+    position:absolute;
+
+    top:15px;
+
+    right:20px;
+
+    font-size:1.5rem;
+
+    cursor:pointer;
+
+}
+
+
+/* ===========================
+   FORM
+=========================== */
+
+#registerForm{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+    margin-top:20px;
+
+}
+
+
+#registerForm input,
+#registerForm textarea{
+
+    padding:12px;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+    font-size:1rem;
+
+}
+
+
+#registerForm textarea{
+
+    resize:none;
+
+}
+
+
+/* ===========================
+   POPUP ANIMATION
+=========================== */
+
+@keyframes popup{
+
+    from{
+
+        transform:scale(0.8);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}

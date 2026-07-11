@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/cards.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/modal.css">
 </head>
 <body>
     <header>
@@ -21,7 +22,7 @@
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="search.html">Search</a></li>
             </ul>
-            <button class="join-btn">
+            <button id="joinBtn" class="join-btn">
                 Join Community
             </button>
         </nav>
@@ -286,6 +287,8 @@
 
                     <li><a href="search.html">Search</a></li>
 
+                    
+
                 </ul>
 
             </div>
@@ -308,7 +311,7 @@
 
                 <p>
                     LinkedIn:
-                    <a href="www.linkedin.com/in/debangshi-karmakar-1a3234276"
+                    <a href="https://www.linkedin.com/in/debangshi-karmakar-1a3234276"
                      target="_blank">
                      LinkedIn Profile   
                     </a>
@@ -331,8 +334,74 @@
     </div>
 
 </footer>
+<!-- Registration Modal -->
+
+<div id="registerModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close">&times;</span>
+
+        <h2>Join DevConnect</h2>
+
+        <form id="registerForm">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Full Name"
+                required>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Email"
+                required>
+
+            <input
+                type="text"
+                id="role"
+                placeholder="Developer Role"
+                required>
+
+            <input
+                type="text"
+                id="skills"
+                placeholder="Skills (comma separated)"
+                required>
+
+            <input
+                type="url"
+                id="github"
+                placeholder="GitHub Profile">
+
+            <input
+                type="url"
+                id="linkedin"
+                placeholder="LinkedIn Profile">
+
+            <textarea
+                id="about"
+                rows="5"
+                placeholder="Tell us about yourself"
+                required></textarea>
+
+            <button
+                type="submit"
+                class="profile-btn">
+
+                Register
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
 <script src="js/app.js"></script>
 <script src="js/developers.js"></script>
-
+<script src="js/projects.js"></script>
+<script src="js/register.js"></script>
 </body>
 </html>

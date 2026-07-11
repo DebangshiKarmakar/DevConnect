@@ -1,16 +1,22 @@
 [
     {
-        "id": 1,
-        "name": "Sarah Johnson",
-        "role": "Full Stack Developer",
-        "image": "https://i.pravatar.cc/200?img=32",
-        "about": "Passionate about building scalable web applications using modern JavaScript frameworks.",
-        "skills": [
-            "HTML",
-            "CSS",
-            "JavaScript"
-        ]
-    },
+    "id": 1,
+    "name": "Sarah Johnson",
+    "role": "Full Stack Developer",
+    "image": "https://i.pravatar.cc/200?img=32",
+    "about": "Passionate about building scalable web applications using modern JavaScript frameworks.",
+    "skills": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+    ],
+    "location": "Bengaluru, India",
+    "experience": "3 Years",
+    "email": "sarah@example.com",
+    "github": "https://github.com/",
+    "linkedin": "https://linkedin.com/",
+    "projectsCompleted": 15
+},
 
     {
         "id": 2,
@@ -22,7 +28,13 @@
             "Java",
             "Spring Boot",
             "MySQL"
-        ]
+        ],
+        "location": "San Francisco, USA",
+        "experience": "5 Years",
+        "email": "alex@example.com",
+        "github": "https://github.com/",
+        "linkedin": "https://linkedin.com/",
+        "projectsCompleted": 20
     },
 
     {
@@ -35,6 +47,13 @@
             "Figma",
             "React",
             "UI Design"
-        ]
+        ],
+        "location": "New York, USA",
+        "experience": "4 Years",
+        "email": "emma@example.com",
+        "github": "https://github.com/",
+        "linkedin": "https://linkedin.com/",
+        "projectsCompleted": 18
     }
 ]
+        
