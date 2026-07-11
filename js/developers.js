@@ -18,6 +18,8 @@ function displayDevelopers(developerList) {
 
         developerGrid.innerHTML += `
 
+}
+
             <div class="developer-card">
 
                 <img src="${developer.image}" alt="${developer.name}">
@@ -156,23 +158,9 @@ filterButtons.forEach(function(button){
         // Highlight clicked button
         button.classList.add("active");
 
-        const selectedRole = button.dataset.role;
+        currentFilter = button.dataset.role;
 
-        if(selectedRole === "all"){
-
-            displayDevelopers(developers);
-
-            return;
-
-        }
-
-        const filtered = developers.filter(function(developer){
-
-            return developer.role === selectedRole;
-
-        });
-
-        displayDevelopers(filtered);
+        applyFilters();
 
     });
 
