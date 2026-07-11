@@ -337,3 +337,36 @@
     font-weight:500;
 
 }
+/* ===========================
+   SEARCH BOX
+=========================== */
+
+.search-box{
+
+    margin:30px auto;
+
+    max-width:500px;
+
+}
+
+.search-box input{
+
+    width:100%;
+
+    padding:14px;
+
+    font-size:1rem;
+
+    border:1px solid #ccc;
+
+    border-radius:10px;
+
+    outline:none;
+
+}
+
+.search-box input:focus{
+
+    border-color:var(--primary-color);
+
+}
