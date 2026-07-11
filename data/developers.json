@@ -1,0 +1,40 @@
+[
+    {
+        "id": 1,
+        "name": "Sarah Johnson",
+        "role": "Full Stack Developer",
+        "image": "https://i.pravatar.cc/200?img=32",
+        "about": "Passionate about building scalable web applications using modern JavaScript frameworks.",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ]
+    },
+
+    {
+        "id": 2,
+        "name": "Alex Bennett",
+        "role": "Backend Developer",
+        "image": "https://i.pravatar.cc/200?img=15",
+        "about": "Experienced in Java, Spring Boot and database optimization.",
+        "skills": [
+            "Java",
+            "Spring Boot",
+            "MySQL"
+        ]
+    },
+
+    {
+        "id": 3,
+        "name": "Emma Chen",
+        "role": "UI/UX Designer",
+        "image": "https://i.pravatar.cc/200?img=47",
+        "about": "Designs beautiful interfaces with a focus on usability and accessibility.",
+        "skills": [
+            "Figma",
+            "React",
+            "UI Design"
+        ]
+    }
+]
