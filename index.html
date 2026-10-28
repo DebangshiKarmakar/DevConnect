@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevConnect</title>
+    <meta name="description" content="Meet developers, discover projects, and find your next collaborator on DevConnect.">
+    <title>DevConnect — Build together</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/cards.css">
@@ -11,422 +15,120 @@
     <link rel="stylesheet" href="css/modal.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <h1>DevConnect</h1>
-            </div>
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Main navigation">
+            <a class="logo" href="index.html" aria-label="DevConnect home"><span class="logo-mark">D</span><span>DevConnect</span></a>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="index.html">Home</a></li>
                 <li><a href="profile.html">Developers</a></li>
                 <li><a href="projects.html">Projects</a></li>
-                <li><a href="search.html">Search</a></li>
+                <li><a href="search.html">Explore</a></li>
             </ul>
-            <button id="joinBtn" class="join-btn">
-                Join Community
-            </button>
+            <div class="nav-actions">
+                <button id="themeToggle" class="theme-btn" type="button" aria-label="Switch to dark theme">☾</button>
+                <button class="join-btn" id="joinBtn" type="button">Join community <span aria-hidden="true">↗</span></button>
+            </div>
         </nav>
     </header>
-    <!-- ==========================
-     HERO SECTION
-=========================== -->
 
-<section class="hero">
-
-    <div class="container">
-
-        <div class="hero-content">
-
-            <!-- Left Side -->
-
-            <div class="hero-text">
-                <div class="hero-badge">
-                🚀 Connect • Collaborate • Grow
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge"><span class="status-dot"></span> A community for people who build</div>
+                    <h1>Good things happen when <span>developers connect.</span></h1>
+                    <p>Meet your next teammate, find an open-source project, and share what you’re building with a community that gets it.</p>
+                    <div class="hero-buttons">
+                        <a class="primary-btn" href="profile.html">Meet the community <span aria-hidden="true">→</span></a>
+                        <a class="secondary-btn" href="projects.html">Explore projects</a>
+                    </div>
+                    <div class="hero-proof"><div class="avatar-stack" aria-hidden="true"><span>SK</span><span>AC</span><span>JM</span><span>+</span></div><span>Small community, big ideas.</span></div>
                 </div>
-                <h1>
-                    Connect. Collaborate.
-                    <span>Create.</span>
-                </h1>
-
-                <p>
-                    DevConnect helps developers build professional portfolios,
-                    discover exciting projects, and collaborate with talented
-                    people from around the world.
-                </p>
-
-                <div class="hero-buttons">
-
-                    <button class="primary-btn">
-                        Explore Developers
-                    </button>
-
-                    <button class="secondary-btn">
-                        View Projects
-                    </button>
-
+                <div class="hero-visual">
+                    <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+                    <img src="assets/hero.svg" alt="Illustration of developers collaborating">
+                    <div class="floating-note note-top"><span class="note-icon">✦</span><span><strong>Build together</strong><small>Better by collaboration</small></span></div>
+                    <div class="floating-note note-bottom"><span class="note-icon note-green">↗</span><span><strong>Your next idea</strong><small>Starts with a connection</small></span></div>
                 </div>
-
             </div>
+        </section>
 
-            <!-- Right Side -->
-
-            <div class="hero-image">
-
-                <img src="assets/hero.svg"
-                     alt="Developer Illustration">
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ==========================
-     FEATURED DEVELOPERS
-========================== -->
-
-<section class="developers">
-
-    <div class="container">
-
-        <div class="section-title">
-            <h2>Featured Developers</h2>
-            <p>Meet talented developers from different domains.</p>
-        </div>
-        <div class="search-box">
-
-        <input
-        type="text"
-        id="searchInput"
-        placeholder="Search developers by name, role or skill...">
-
-        </div>
-        <div class="filter-buttons">
-
-    <button class="filter-btn active" data-role="all">All</button>
-
-    <button class="filter-btn" data-role="Frontend Developer">Frontend</button>
-
-    <button class="filter-btn" data-role="Backend Developer">Backend</button>
-
-    <button class="filter-btn" data-role="Full Stack Developer">Full Stack</button>
-
-    <button class="filter-btn" data-role="AI Engineer">AI</button>
-
-    <button class="filter-btn" data-role="Data Scientist">Data Science</button>
-    
-    <button class="filter-btn" data-role="UI/UX Designer">UI/UX</button>
-</div>
-
-        
-        <div class="developer-grid" id="developerGrid"></div>
-            
-
-        
-
-    </div>
-
-</section>
-<!-- ==========================
-     FEATURED PROJECTS
-========================== -->
-
-<section class="projects">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <h2>Featured Projects</h2>
-
-            <p>
-                Discover innovative projects built by talented developers.
-            </p>
-
-        </div>
-
-        <div class="project-grid">
-
-            <!-- Project 1 -->
-
-            <div class="project-card">
-
-                <h3>AI Resume Analyzer</h3>
-
-                <p>
-                    An AI-powered web application that analyzes resumes and provides feedback to improve ATS scores.
-                </p>
-
-                <div class="project-tech">
-
-                    <span>Python</span>
-                    <span>Flask</span>
-                    <span>Machine Learning</span>
-
+        <section class="developers section-space" id="community">
+            <div class="container">
+                <div class="section-heading">
+                    <div><p class="eyebrow">THE PEOPLE</p><h2>Find your kind of people.</h2><p class="section-intro">A few of the builders making things happen in our community.</p></div>
+                    <a class="text-link" href="profile.html">Browse all developers <span aria-hidden="true">→</span></a>
                 </div>
-
-                <button class="project-btn">
-                    View Project
-                </button>
-
-            </div>
-
-            <!-- Project 2 -->
-
-            <div class="project-card">
-
-                <h3>Expense Tracker</h3>
-
-                <p>
-                    A responsive finance tracker that helps users manage expenses with interactive charts.
-                </p>
-
-                <div class="project-tech">
-
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-
+                <div class="search-box">
+                    <span aria-hidden="true">⌕</span>
+                    <input type="search" id="searchInput" placeholder="Search people by name, role, or skill..." aria-label="Search developers">
+                    <kbd>/</kbd>
                 </div>
-
-                <button class="project-btn">
-                    View Project
-                </button>
-
-            </div>
-
-            <!-- Project 3 -->
-
-            <div class="project-card">
-
-                <h3>Chat Application</h3>
-
-                <p>
-                    A real-time messaging platform supporting instant communication and secure authentication.
-                </p>
-
-                <div class="project-tech">
-
-                    <span>React</span>
-                    <span>Firebase</span>
-                    <span>Node.js</span>
-
+                <div class="filter-buttons" aria-label="Filter developers by role">
+                    <button class="filter-btn active" data-role="all" type="button">Everyone</button>
+                    <button class="filter-btn" data-role="Frontend Developer" type="button">Frontend</button>
+                    <button class="filter-btn" data-role="Backend Developer" type="button">Backend</button>
+                    <button class="filter-btn" data-role="Full Stack Developer" type="button">Full stack</button>
+                    <button class="filter-btn" data-role="AI Engineer" type="button">AI</button>
+                    <button class="filter-btn" data-role="Data Scientist" type="button">Data science</button>
+                    <button class="filter-btn" data-role="UI/UX Designer" type="button">Design</button>
                 </div>
-
-                <button class="project-btn">
-                    View Project
-                </button>
-
+                <div class="developer-grid" id="developerGrid" aria-live="polite"></div>
             </div>
+        </section>
 
+        <section class="projects section-space">
+            <div class="container">
+                <div class="section-heading">
+                    <div><p class="eyebrow">MADE BY THE COMMUNITY</p><h2>Projects worth a closer look.</h2><p class="section-intro">Get inspired—or find a project you can help bring to life.</p></div>
+                    <a class="text-link" href="projects.html">Explore all projects <span aria-hidden="true">→</span></a>
+                </div>
+                <div class="project-grid" id="projectGrid" aria-live="polite"></div>
+            </div>
+        </section>
+
+        <section class="join-banner">
+            <div class="container join-banner-inner">
+                <div><p class="eyebrow">YOUR NEXT CHAPTER</p><h2>Make something better, together.</h2><p>Share what you do and meet the people who can help you do more.</p></div>
+                <button class="primary-btn" id="joinBannerBtn" type="button">Create your profile <span aria-hidden="true">→</span></button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <a class="logo footer-logo" href="index.html"><span class="logo-mark">D</span><span>DevConnect</span></a>
+            <p>Built for people who make things.</p>
+            <div class="footer-links"><a href="profile.html">Developers</a><a href="projects.html">Projects</a><a href="search.html">Explore</a></div>
+            <small>© 2026 DevConnect</small>
         </div>
+    </footer>
 
+    <div id="registerModal" class="modal" aria-hidden="true">
+        <section class="modal-content" role="dialog" aria-modal="true" aria-labelledby="registerTitle">
+            <button class="close" type="button" aria-label="Close dialog">×</button>
+            <p class="eyebrow">JOIN THE COMMUNITY</p>
+            <h2 id="registerTitle">Let’s build your profile.</h2>
+            <p class="modal-intro">Tell the community a little about yourself. Your profile is saved in this browser.</p>
+            <form id="registerForm">
+                <label for="name">Your name</label><input type="text" id="name" name="name" placeholder="e.g. Riley Chen" autocomplete="name" required maxlength="80">
+                <label for="email">Email address</label><input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required maxlength="254">
+                <label for="role">What do you do?</label><input type="text" id="role" name="role" placeholder="e.g. Frontend Developer" required maxlength="80">
+                <label for="skills">Your skills <span>(comma separated)</span></label><input type="text" id="skills" name="skills" placeholder="JavaScript, React, CSS" required maxlength="200">
+                <label for="github">GitHub profile <span>(optional)</span></label><input type="url" id="github" name="github" placeholder="https://github.com/you">
+                <label for="linkedin">LinkedIn profile <span>(optional)</span></label><input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/you">
+                <label for="about">A little about you</label><textarea id="about" name="about" rows="3" placeholder="What are you building or excited to learn?" required maxlength="500"></textarea>
+                <p id="registerMessage" class="form-message" role="status"></p>
+                <button type="submit" class="primary-btn form-submit">Create profile <span aria-hidden="true">→</span></button>
+            </form>
+        </section>
     </div>
 
-</section>
-<!-- ==========================
-     STATISTICS
-========================== -->
-
-<section class="stats">
-
-    <div class="container">
-
-        <div class="stats-grid">
-
-            <div class="stat-card">
-
-                <h2>10K+</h2>
-
-                <p>Developers</p>
-
-            </div>
-
-            <div class="stat-card">
-
-                <h2>500+</h2>
-
-                <p>Projects</p>
-
-            </div>
-
-            <div class="stat-card">
-
-                <h2>120+</h2>
-
-                <p>Collaborations</p>
-
-            </div>
-
-            <div class="stat-card">
-
-                <h2>25+</h2>
-
-                <p>Countries</p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-<!-- ==========================
-     FOOTER
-========================== -->
-
-<footer>
-
-    <div class="container">
-
-        <div class="footer-grid">
-
-            <!-- About -->
-
-            <div class="footer-section">
-
-                <h2>DevConnect</h2>
-
-                <p>
-                    A platform where developers connect, collaborate,
-                    and showcase amazing projects.
-                </p>
-
-            </div>
-
-            <!-- Quick Links -->
-
-            <div class="footer-section">
-
-                <h3>Quick Links</h3>
-
-                <ul>
-
-                    <li><a href="index.html">Home</a></li>
-
-                    <li><a href="profile.html">Developers</a></li>
-
-                    <li><a href="projects.html">Projects</a></li>
-
-                    <li><a href="search.html">Search</a></li>
-
-                    
-
-                </ul>
-
-            </div>
-
-            <!-- Contact -->
-
-            <div class="footer-section">
-
-                <h3>Contact</h3>
-
-                <p>Email: hello@devconnect.com</p>
-
-                <p>
-                    GitHub:
-                    <a href="https://github.com/DebangshiKarmakar"
-                    target="_blank">
-                    GitHub Profile
-                     </a>
-                </p>
-
-                <p>
-                    LinkedIn:
-                    <a href="https://www.linkedin.com/in/debangshi-karmakar-1a3234276"
-                     target="_blank">
-                     LinkedIn Profile   
-                    </a>
-                </p>
-
-            </div>
-
-        </div>
-
-        <hr>
-
-        <div class="footer-bottom">
-
-            <p>
-                © 2025 DevConnect. All Rights Reserved.
-            </p>
-
-        </div>
-
-    </div>
-
-</footer>
-<!-- Registration Modal -->
-
-<div id="registerModal" class="modal">
-
-    <div class="modal-content">
-
-        <span class="close">&times;</span>
-
-        <h2>Join DevConnect</h2>
-
-        <form id="registerForm">
-
-            <input
-                type="text"
-                id="name"
-                placeholder="Full Name"
-                required>
-
-            <input
-                type="email"
-                id="email"
-                placeholder="Email"
-                required>
-
-            <input
-                type="text"
-                id="role"
-                placeholder="Developer Role"
-                required>
-
-            <input
-                type="text"
-                id="skills"
-                placeholder="Skills (comma separated)"
-                required>
-
-            <input
-                type="url"
-                id="github"
-                placeholder="GitHub Profile">
-
-            <input
-                type="url"
-                id="linkedin"
-                placeholder="LinkedIn Profile">
-
-            <textarea
-                id="about"
-                rows="5"
-                placeholder="Tell us about yourself"
-                required></textarea>
-
-            <button
-                type="submit"
-                class="profile-btn">
-
-                Register
-
-            </button>
-
-        </form>
-
-    </div>
-
-</div>
-<script src="js/app.js"></script>
-<script src="js/developers.js"></script>
-<script src="js/projects.js"></script>
-<script src="js/register.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/developers.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/register.js"></script>
+    <script src="js/theme.js"></script>
 </body>
 </html>

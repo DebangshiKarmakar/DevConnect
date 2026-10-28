@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore projects and find a place to contribute with DevConnect.">
+    <title>Projects — DevConnect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/navbar.css"><link rel="stylesheet" href="css/cards.css"><link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header class="site-header"><nav class="navbar container" aria-label="Main navigation">
+        <a class="logo" href="index.html"><span class="logo-mark">D</span><span>DevConnect</span></a>
+        <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="profile.html">Developers</a></li><li><a class="active" href="projects.html">Projects</a></li><li><a href="search.html">Explore</a></li></ul>
+        <div class="nav-actions"><button id="themeToggle" class="theme-btn" type="button" aria-label="Switch to dark theme">☾</button><a class="join-btn" href="index.html#join">Join community <span aria-hidden="true">↗</span></a></div>
+    </nav></header>
+    <main>
+        <section class="page-hero"><div class="container"><p class="eyebrow">IDEAS IN MOTION</p><h1>Projects made better <span>together.</span></h1><p>Discover community projects, find something that sparks your curiosity, and meet the people behind it.</p></div></section>
+        <section class="page-content"><div class="container">
+            <div class="search-box"><span aria-hidden="true">⌕</span><input id="projectSearch" type="search" placeholder="Search projects or technologies..." aria-label="Search projects"><kbd>/</kbd></div>
+            <div id="projectFilters" class="filter-buttons" aria-label="Filter projects by technology"></div>
+            <div id="projectGrid" class="project-grid" aria-live="polite"></div>
+        </div></section>
+    </main>
+    <footer class="site-footer"><div class="container footer-inner"><a class="logo footer-logo" href="index.html"><span class="logo-mark">D</span><span>DevConnect</span></a><p>Built for people who make things.</p><div class="footer-links"><a href="profile.html">Developers</a><a href="projects.html">Projects</a><a href="search.html">Explore</a></div><small>© 2026 DevConnect</small></div></footer>
+    <script src="js/storage.js"></script><script src="js/projects.js"></script><script src="js/theme.js"></script>
+</body>
+</html>

@@ -3,36 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevConnect - Developers</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/cards.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <meta name="description" content="Meet developers and find your next collaborator on DevConnect.">
+    <title>Developers — DevConnect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/navbar.css"><link rel="stylesheet" href="css/cards.css"><link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <h1>DevConnect</h1>
+    <header class="site-header"><nav class="navbar container" aria-label="Main navigation">
+        <a class="logo" href="index.html"><span class="logo-mark">D</span><span>DevConnect</span></a>
+        <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a class="active" href="profile.html">Developers</a></li><li><a href="projects.html">Projects</a></li><li><a href="search.html">Explore</a></li></ul>
+        <div class="nav-actions"><button id="themeToggle" class="theme-btn" type="button" aria-label="Switch to dark theme">☾</button><a class="join-btn" href="index.html#join">Join community <span aria-hidden="true">↗</span></a></div>
+    </nav></header>
+    <main>
+        <section class="page-hero"><div class="container"><p class="eyebrow">THE COMMUNITY</p><h1>People make the <span>best projects.</span></h1><p>Meet developers, designers, and curious minds ready to make something together.</p></div></section>
+        <section class="page-content"><div class="container">
+            <div class="search-box"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Search by name, role, or skill..." aria-label="Search developers"><kbd>/</kbd></div>
+            <div class="filter-buttons" aria-label="Filter developers by role">
+                <button class="filter-btn active" data-role="all" type="button">Everyone</button><button class="filter-btn" data-role="Frontend Developer" type="button">Frontend</button><button class="filter-btn" data-role="Backend Developer" type="button">Backend</button><button class="filter-btn" data-role="Full Stack Developer" type="button">Full stack</button><button class="filter-btn" data-role="AI Engineer" type="button">AI</button><button class="filter-btn" data-role="Data Scientist" type="button">Data science</button><button class="filter-btn" data-role="UI/UX Designer" type="button">Design</button>
             </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                
-                <li><a href="projects.html">Projects</a></li>
-                
-            </ul>
-            
-        </nav>
-    </header>
-<section class="developers">
-    <div class="container">
-        <div id="profileContainer">
-
-        </div>
-    </div>
-</section>
-<script src="js/profile.js"></script>
+            <div id="profileContainer"></div><div class="developer-grid" id="developerGrid" aria-live="polite"></div>
+        </div></section>
+    </main>
+    <footer class="site-footer"><div class="container footer-inner"><a class="logo footer-logo" href="index.html"><span class="logo-mark">D</span><span>DevConnect</span></a><p>Built for people who make things.</p><div class="footer-links"><a href="profile.html">Developers</a><a href="projects.html">Projects</a><a href="search.html">Explore</a></div><small>© 2026 DevConnect</small></div></footer>
+    <script src="js/storage.js"></script><script src="js/developers.js"></script><script src="js/profile.js"></script><script src="js/theme.js"></script>
 </body>
 </html>
-    <!-- ==========================
-     DEVELOPERS SECTION

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Search developers and projects across the DevConnect community.">
+    <title>Explore — DevConnect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/navbar.css"><link rel="stylesheet" href="css/cards.css"><link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header class="site-header"><nav class="navbar container" aria-label="Main navigation">
+        <a class="logo" href="index.html"><span class="logo-mark">D</span><span>DevConnect</span></a>
+        <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="profile.html">Developers</a></li><li><a href="projects.html">Projects</a></li><li><a class="active" href="search.html">Explore</a></li></ul>
+        <div class="nav-actions"><button id="themeToggle" class="theme-btn" type="button" aria-label="Switch to dark theme">☾</button><a class="join-btn" href="index.html#join">Join community <span aria-hidden="true">↗</span></a></div>
+    </nav></header>
+    <main>
+        <section class="page-hero"><div class="container"><p class="eyebrow">A GOOD CONNECTION STARTS HERE</p><h1>Find your next <span>what if.</span></h1><p>Search people, skills, and projects across the community.</p></div></section>
+        <section class="page-content"><div class="container">
+            <div class="search-box global-search"><span aria-hidden="true">⌕</span><input id="globalSearch" type="search" placeholder="Try “React”, “design”, or “AI”..." aria-label="Search the community"><kbd>/</kbd></div>
+            <p class="result-summary" id="searchSummary" aria-live="polite"></p>
+            <div id="searchResults" class="search-results"></div>
+        </div></section>
+    </main>
+    <footer class="site-footer"><div class="container footer-inner"><a class="logo footer-logo" href="index.html"><span class="logo-mark">D</span><span>DevConnect</span></a><p>Built for people who make things.</p><div class="footer-links"><a href="profile.html">Developers</a><a href="projects.html">Projects</a><a href="search.html">Explore</a></div><small>© 2026 DevConnect</small></div></footer>
+    <script src="js/storage.js"></script><script src="js/search.js"></script><script src="js/theme.js"></script>
+</body>
+</html>
